@@ -1,0 +1,18 @@
+<html>
+    <head><title>title</title></head>
+    <body>
+       <h2>{{ titre.titre }}</h2>
+        <p>Mes titres sont :</p>
+        
+        <ul>
+    
+        <li>Type : {{ titre.type }}</li>
+        <li>Année de formation : {{ titre.year }}</li>
+        <li>Prix : {{ titre.sold}}</li>
+        <li>description : {{ titre.description}}</li>
+        <li>groupe : {{ titre.band}}</li>
+ 
+    </ul>
+    <a href="{% url 'service-list' %}">Retour à tous les titres</a>
+    </body>
+</html>

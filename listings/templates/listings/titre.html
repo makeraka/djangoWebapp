@@ -2,11 +2,11 @@
     <head><title>title</title></head>
     <body>
         <h1>Hello Django !</h1>
-        <p>Mes groupes préférés sont :</p>
+        <p>Mes titres sont :</p>
         
         <ul>
             {% for titre in titres %}
-            <li>{{ titre.titre }}</li>
+           <li><a href="{% url 'service-detail' titre.id %}">{{ titre.titre}}</a></li>
             {% endfor %}
         </ul>
     </ul>

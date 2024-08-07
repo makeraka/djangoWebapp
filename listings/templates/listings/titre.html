@@ -1,14 +1,19 @@
-<html>
-    <head><title>title</title></head>
-    <body>
-        <h1>Hello Django !</h1>
-        <p>Mes titres sont :</p>
-        
-        <ul>
-            {% for titre in titres %}
-           <li><a href="{% url 'service-detail' titre.id %}">{{ titre.titre}}</a></li>
-            {% endfor %}
-        </ul>
-    </ul>
-    </body>
-</html>
+
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h1>Liste</h1>
+
+ <a href="{% url 'service-create' %}">Créer un nouveau listing</a>
+
+<ul>
+    {% for titre in titres %}
+    <li>
+        <a href="{% url 'service-detail' titre.id %}">{{ titre.titre}}</a>
+        <a href="{% url 'service-change' titre.id %}">[modifier]</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

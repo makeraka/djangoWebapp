@@ -1,3 +1,5 @@
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 """
 Django settings for merchex project.
 
